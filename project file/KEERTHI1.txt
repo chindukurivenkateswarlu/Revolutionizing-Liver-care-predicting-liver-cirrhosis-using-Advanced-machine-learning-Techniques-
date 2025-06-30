@@ -1,0 +1,19 @@
+# Import required libraries
+import pandas as pd
+
+# Define the dataset URL from UCI Repository
+url = "https://archive.ics.uci.edu/ml/machine-learning-databases/00225/Indian%20Liver%20Patient%20Dataset%20(ILPD).csv"
+
+# Define column names as they are not provided in the dataset directly
+column_names = [
+    "Age", "Gender", "Total_Bilirubin", "Direct_Bilirubin",
+    "Alkaline_Phosphotase", "Alamine_Aminotransferase",
+    "Aspartate_Aminotransferase", "Total_Proteins",
+    "Albumin", "Albumin_and_Globulin_Ratio", "Liver_Disease"
+]
+
+# Read the CSV file
+df = pd.read_csv(url, names=column_names)
+
+# Display the first 5 rows
+print(df.head())
