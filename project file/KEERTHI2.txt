@@ -1,0 +1,5 @@
+for feature in key_features:
+    plt.figure(figsize=(6, 4))
+    sns.boxplot(x=df[feature])
+    plt.title(f'Boxplot of {feature}')
+    plt.show()
